@@ -1,0 +1,22 @@
+{
+  "name"  : "lifeworks/swooleforsymfony",
+  "description": "Implements swoole php extension in symfony projects",
+  "type": "library",
+  "autoload": {
+      "psr-4": {
+          "Lifeworks\\HttpServerBundle\\": ""
+      }
+  },
+  "require": {
+      "php": "^7.1.3",
+      "symfony/symfony": "^4.0"
+  },
+  "minimum-stability": "dev",
+  "license": "MIT",
+  "authors": [
+      {
+          "name": "wajid",
+          "email": "wajidakhterabbasi@gmail.com"
+      }
+  ]
+}
