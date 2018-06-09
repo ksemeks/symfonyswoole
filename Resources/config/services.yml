@@ -1,0 +1,15 @@
+parameters:
+    kernel.project_directory: '%kernel.project_dir%'
+    swoole.process_id_file_name: 'swoole_server.pid'
+services:
+
+    Lifeworks\SwooleHttpServerBundle\Command\:
+        resource: '../../Command'
+        arguments:
+            $kernelProjectDirectory: '%kernel.project_directory%'
+            $swoolePidFileName: '%swoole.process_id_file_name%'
+        tags: ['console.command']
+
+    Lifeworks\SwooleHttpServerBundle\Command\StartCommand:
+        arguments: [ '%kernel.project_directory%' , '%swoole.process_id_file_name%', '@kernel']
+        tags: ['console.command']
